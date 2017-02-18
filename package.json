@@ -1,0 +1,32 @@
+{
+  "name": "php-github",
+  "version": "1.0.0",
+  "description": "Web interface for manage git repository",
+  "repository": "gitolite@antoine-roux.tk:http/",
+  "README": "README.md",
+  "license": "beerware",
+  "angular-cli": {},
+  "scripts": {
+    "tsc": "tsc -p web/js/ -w",
+    "build": "node_modules/webpack/bin/webpack.js --config ./webpack.config.js",
+    "ng": "ng",
+    "start": "ng serve",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/common": "^2.4.7",
+    "@angular/core": "^2.4.7",
+    "@angular/forms": "^2.4.7",
+    "@angular/http": "^2.4.7",
+    "@angular/platform-browser": "^2.4.7",
+    "@angular/platform-browser-dynamic": "^2.4.7",
+    "@angular/router": "^3.4.7",
+    "rxjs": "^5.1.1"
+  },
+  "devDependencies": {
+    "angular-cli": "^1.0.0-beta.28.3",
+    "ts-loader": "^2.0.0",
+    "typescript": "^2.1.6"
+  }
+}

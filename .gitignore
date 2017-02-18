@@ -1,0 +1,40 @@
+# compiled output
+/web/compiled
+/web/bundles
+
+# dependencies
+/node_modules
+/bower_components
+/vendor
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# misc
+npm-debug.log
+
+# Symfony
+/app/config/parameters.yml
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+
+# for this project only
+*.git
+
+#System Files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,27 @@
+{
+  "name": "phpgithub",
+  "authors": [
+    "gitolite <antoinroux@hotmail.fr>"
+  ],
+  "description": "un github codé en php",
+  "main": "app.php",
+  "keywords": [
+    "github",
+    "git",
+    "php"
+  ],
+  "license": "beerware",
+  "homepage": "/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

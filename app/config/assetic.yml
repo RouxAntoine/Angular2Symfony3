@@ -1,0 +1,25 @@
+assetic:
+    debug:          "%kernel.debug%"
+    use_controller: "%kernel.debug%"
+    filters:
+        cssrewrite: ~
+    # assets:
+        # phpgithub_js:
+        #     inputs:
+        #         - %kernel.root_dir%/../web/node_modules/angular2/bundles/angular2-polyfills.js
+        #         - %kernel.root_dir%/../web/node_modules/typescript/lib/typescript.js
+        #         - %kernel.root_dir%/../web/node_modules/systemjs/dist/system.js
+        #         - %kernel.root_dir%/../web/node_modules/rxjs/bundles/Rx.js
+        #         - %kernel.root_dir%/../web/node_modules/angular2/bundles/angular2.js
+        #         - %kernel.root_dir%/../web/node_modules/angular2/bundles/http.dev.js
+
+        #         - %kernel.root_dir%/../web/bower_components/jquery/dist/jquery.min.js
+        #     output: bundles/bundle.js
+
+        # phpgithub_ts:
+        #     inputs:
+        #         - %kernel.root_dir%/../web/compiled/main.js
+        #     output: bundles/main.js
+    # liste les bundles qui contiennent des assets
+    # bundles:
+    #   - AppBundle

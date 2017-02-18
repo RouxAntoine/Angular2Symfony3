@@ -1,0 +1,14 @@
+<app-menu></app-menu>
+<h1>
+	{{ title }}
+</h1>
+<div>
+	<div *ngFor='let repo of repos'>
+
+    	{{ repo.id }} : {{ repo.name }}
+    	<div>
+    		<label>Project: </label><input [(ngModel)]="repo.name" placeholder="Project name">
+    	</div>
+
+	</div>
+</div>
