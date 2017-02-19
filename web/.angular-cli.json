@@ -1,25 +1,22 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "version": "1.0.0-beta.32.3",
-    "name": "toto"
+    "version": "1.0.0",
+    "name": "phpGithub"
   },
   "apps": [
     {
-      "root": "web/js/",
+      "root": "src/",
       "outDir": "dist",
       "assets": [
         "assets",
         "favicon.ico"
       ],
-      "index": "../../app/Resources/views/base.html",
+      "index": "index.html",
       "main": "main.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
       "prefix": "app",
-      "styles": [
-        "../dist/css/style.css"
-      ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {

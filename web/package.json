@@ -7,8 +7,7 @@
   "license": "beerware",
   "angular-cli": {},
   "scripts": {
-    "build": "node_modules/webpack/bin/webpack.js --config ./webpack.config.js --watch",
-    "tsc": "tsc -p web/js/ -w",
+    "tsc": "tsc -p src/ -w",
     "ng": "ng",
     "start": "ng serve",
     "test": "ng test"
@@ -27,15 +26,11 @@
     "rxjs": "^5.1.1"
   },
   "devDependencies": {
-    "@types/node": "^7.0.5",
-    "@types/requirejs": "^2.1.28",
-    "angular2-template-loader": "^0.6.2",
     "less": "^2.7.2",
-    "raw-loader": "^0.5.1",
     "reflect-metadata": "^0.1.9",
-    "to-string-loader": "^1.1.5",
-    "ts-loader": "^2.0.0",
+    "ts-node": "^2.1.0",
     "typescript": "^2.1.6",
+    "typings": "^2.1.0",
     "zone.js": "^0.7.7"
   }
 }

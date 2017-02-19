@@ -4,14 +4,14 @@ import { Repository } from './repository';
 
 @Component({
 	selector: 'app-root',
-    // templateUrl: './app.component.html',
-    // styles: [require('./app.component.css')],
-    template: `<h1>SALUT</h1>`,
-    styles: [`
-		body {
-			font-family: Arial, Helvetica, sans-serif;
-		}
-	`],
+    templateUrl: './app.component.html',
+    styles: ['./app.component.css'],
+    // template: `<h1>SALUT</h1>`,
+ //    styles: [`
+	// 	body {
+	// 		font-family: Arial, Helvetica, sans-serif;
+	// 	}
+	// `],
     providers: [RepositoryService]
 })
 export class AppComponent implements OnInit {

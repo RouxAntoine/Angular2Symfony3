@@ -13,11 +13,11 @@ assetic:
         yui_js:
             jar: "%kernel.root_dir%/Resources/lib/yuicompressor-2.4.8.jar"
     assets:
-        phpgithub_js:
+        # phpgithub_js:
             # filter: ['yui_js']
-            inputs:
-                - %kernel.root_dir%/../web/bundles/bundle.js
-            output: dist/js/main.js
+            # inputs:
+            #     - %kernel.root_dir%/../web/bundles/bundle.js
+            # output: dist/js/main.js
 
         phpgithub_css:
             filter: ['yui_css', 'less']
