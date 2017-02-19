@@ -1,25 +1,30 @@
 assetic:
     debug:          "%kernel.debug%"
-    use_controller: "%kernel.debug%"
+    use_controller: false
+    # use_controller: "%kernel.debug%"
     filters:
         cssrewrite: ~
-    # assets:
-        # phpgithub_js:
-        #     inputs:
-        #         - %kernel.root_dir%/../web/node_modules/angular2/bundles/angular2-polyfills.js
-        #         - %kernel.root_dir%/../web/node_modules/typescript/lib/typescript.js
-        #         - %kernel.root_dir%/../web/node_modules/systemjs/dist/system.js
-        #         - %kernel.root_dir%/../web/node_modules/rxjs/bundles/Rx.js
-        #         - %kernel.root_dir%/../web/node_modules/angular2/bundles/angular2.js
-        #         - %kernel.root_dir%/../web/node_modules/angular2/bundles/http.dev.js
+        less:
+            node: /usr/bin/node
+            node_paths: [%kernel.root_dir%/../node_modules]
+        
+        yui_css:
+            jar: "%kernel.root_dir%/Resources/lib/yuicompressor-2.4.8.jar"
+        yui_js:
+            jar: "%kernel.root_dir%/Resources/lib/yuicompressor-2.4.8.jar"
+    assets:
+        phpgithub_js:
+            # filter: ['yui_js']
+            inputs:
+                - %kernel.root_dir%/../web/bundles/bundle.js
+            output: dist/js/main.js
 
-        #         - %kernel.root_dir%/../web/bower_components/jquery/dist/jquery.min.js
-        #     output: bundles/bundle.js
+        phpgithub_css:
+            filter: ['yui_css', 'less']
+            inputs:
+                - %kernel.root_dir%/../web/css/style.less
+            output: dist/css/style.css
 
-        # phpgithub_ts:
-        #     inputs:
-        #         - %kernel.root_dir%/../web/compiled/main.js
-        #     output: bundles/main.js
     # liste les bundles qui contiennent des assets
-    # bundles:
-    #   - AppBundle
+    bundles:
+      - AppBundle
