@@ -1,4 +1,4 @@
-import 'zone.js';
+import 'npm:zone.js/dist/zone.js';
 import 'reflect-metadata';
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';

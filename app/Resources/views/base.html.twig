@@ -15,6 +15,20 @@
             <link href="{{ asset('dist/css/style.css') }}" rel="stylesheet" media="screen" />
             <script src="{{ asset('dist/js/main.js') }}"></script>
         -->
+
+
+        <script src="phpGithub/dist/lib/core-js/client/shim.min.js"></script>
+
+        <script src="phpGithub/dist/lib/zone.js/dist/zone.js"></script>
+        <script src="phpGithub/dist/lib/reflect-metadata/Reflect.js"></script>
+        <script src="phpGithub/dist/lib/systemjs/dist/system.src.js"></script>
+
+        <script src="phpGithub/dist/systemjs.config.js"></script>
+        <script>
+            System.import('app')
+                    .then(null, console.error.bind(console));
+        </script>
+
     </head>
     <body>
         <app-root></app-root>
