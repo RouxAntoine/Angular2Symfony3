@@ -13,8 +13,7 @@
     "clean": "gulp clean",
     "compile": "gulp compile",
     "build": "gulp build",
-    "start": "concurrently --kill-others \"gulp watch\"",
-    "postinstall": "typings install"
+    "start": "concurrently --kill-others \"gulp watch\""
   },
   "private": true,
   "dependencies": {
@@ -30,6 +29,8 @@
     "rxjs": "^5.1.1"
   },
   "devDependencies": {
+    "@types/core-js": "^0.9.35",
+    "@types/node": "^7.0.5",
     "concurrently": "^3.3.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
@@ -41,7 +42,6 @@
     "systemjs": "^0.20.9",
     "ts-node": "^2.1.0",
     "typescript": "^2.1.6",
-    "typings": "^2.1.0",
     "zone.js": "^0.7.7"
   }
 }

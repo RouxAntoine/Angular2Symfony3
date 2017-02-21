@@ -4,14 +4,9 @@ import { Repository } from './repository';
 
 @Component({
 	selector: 'app-root',
-    templateUrl: './app.component.html',
-    styles: ['./app.component.css'],
-    // template: `<h1>SALUT</h1>`,
- //    styles: [`
-	// 	body {
-	// 		font-family: Arial, Helvetica, sans-serif;
-	// 	}
-	// `],
+    moduleId: module.id,
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.css'],
     providers: [RepositoryService]
 })
 export class AppComponent implements OnInit {
@@ -20,9 +15,13 @@ export class AppComponent implements OnInit {
 	title = 'List des dépôts';
 	repos: Repository[] = [];
 
-	ngOnInit() {
-		this.repoService.getRepo().then(repos => this.repos = repos);
-	}
-
 	constructor(private repoService: RepositoryService) { }
+
+  ngOnInit() {
+    // this.repoService.getRepo()
+    //   .subscribe(repos => this.repos = repos);
+
+    this.repoService.getRepo().then(repos => this.repos = repos);
+  }
+
 }

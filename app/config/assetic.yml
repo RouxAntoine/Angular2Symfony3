@@ -6,13 +6,17 @@ assetic:
         cssrewrite: ~
         less:
             node: /usr/bin/node
-            node_paths: [%kernel.root_dir%/../node_modules]
+            node_paths: [%kernel.root_dir%/../web/node_modules]
         
         yui_css:
             jar: "%kernel.root_dir%/Resources/lib/yuicompressor-2.4.8.jar"
         yui_js:
             jar: "%kernel.root_dir%/Resources/lib/yuicompressor-2.4.8.jar"
     assets:
+        favicon:
+            inputs:
+                - %kernel.root_dir%/../web/favicon.ico
+            output: bundles/favicon.ico
         # phpgithub_js:
             # filter: ['yui_js']
             # inputs:

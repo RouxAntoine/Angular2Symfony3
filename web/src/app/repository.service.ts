@@ -6,6 +6,7 @@ import { DATAREPO } from './data';
 
 @Injectable()
 export class RepositoryService {
+
 	getRepo(): Promise<Repository[]> {
 		// get repository
 		DATAREPO.forEach(function(el, i) {
