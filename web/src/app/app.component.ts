@@ -14,14 +14,18 @@ export class AppComponent implements OnInit {
 
 	title = 'List des dépôts';
 	repos: Repository[] = [];
+  errorGet = '';
 
 	constructor(private repoService: RepositoryService) { }
 
   ngOnInit() {
-    // this.repoService.getRepo()
-    //   .subscribe(repos => this.repos = repos);
+    this.repoService.getRepo()
+                      .subscribe(
+                        repos => this.repos = repos,
+                        error => this.errorGet = <any>error
+                      );
 
-    this.repoService.getRepo().then(repos => this.repos = repos);
+    // this.repoService.getRepo().then(repos => this.repos = repos);
   }
 
 }
