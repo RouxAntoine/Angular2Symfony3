@@ -2,7 +2,7 @@
   "name": "php-github",
   "version": "1.0.0",
   "description": "Web interface for manage git repository",
-  "repository": "gitolite@antoine-roux.tk:http/",
+  "repository": "https://github.com/RouxAntoine/Angular2Symfony3/",
   "README": "README.md",
   "license": "beerware",
   "angular-cli": {},
