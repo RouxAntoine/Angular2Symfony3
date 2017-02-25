@@ -20,6 +20,7 @@ web/bower_components
 # misc
 web/ts-node-*/
 npm-debug.log
+web/assetic_watch_*
 
 # Symfony
 /app/config/parameters.yml
