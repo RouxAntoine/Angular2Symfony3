@@ -1,7 +1,5 @@
 <?php
 
-require_once 'Resources/lib/glip/lib/autoload.php';
-
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Composer\Autoload\ClassLoader;
 
