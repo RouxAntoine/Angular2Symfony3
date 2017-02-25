@@ -23,7 +23,7 @@ The purpose of this repository is to provide an example of configuration for int
 - [jqeury]("https://github.com/jquery/jquery")
 
 ### CSS
-    - [bootstrap]("http://getbootstrap.com/css")
+- [bootstrap]("http://getbootstrap.com/css")
 
 An example of less files compiled with 
 
