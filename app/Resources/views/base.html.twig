@@ -2,7 +2,10 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <base href="/phpGithub/">
+        <base href={{ app.request.server.get('DOCUMENT_ROOT') }}">
+<!--        <base href="{{ base_dir }}">    -->
+<!--        <base href="{{ app.request.baseUrl }}>  -->
+<!--        <base href="{{ app.request.getSchemeAndHttpHost() }}>    -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{% block title %}Welcome!{% endblock %}</title>
