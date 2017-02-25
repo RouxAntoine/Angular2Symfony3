@@ -2,10 +2,3 @@ app:
     resource: "@AppBundle/Controller/"
     type:     annotation
     prefix:   /
-
-api:
-    resource: "@RepositoryBundle/Controller/"
-    type:     annotation
-    prefix:   "/api/"
-    options:
-            expose: true
