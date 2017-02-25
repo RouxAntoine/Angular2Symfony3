@@ -1,35 +1,67 @@
-phpGithub
-=========
+symfony 3.2 && angular2 project
+===============================
 
-A Symfony project created on February 15, 2017, 3:55 pm.
-# PhpGithub
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project use angular2 typescript and symfony 3 for backend.
+The purpose of this repository is to provide an example of configuration for integrate angular2 into symfony project
 
-## Code scaffolding
+### Technology used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+#### PHP
+    - [Fos assetic bundle]("https://github.com/symfony/assetic-bundle")
+    - [Fos rest bundle]("https://github.com/FriendsOfSymfony/FOSRestBundle")
+    - [yuiCompressor]("https://github.com/yui/yuicompressor")
+    - [composer]("https://github.com/composer/composer")
 
-## Build
+#### Javascript
+    - [gulp]("https://github.com/gulpjs/gulp")
+    - [less]("https://github.com/less/less.js")
+    - [systemJs]("https://github.com/systemjs/systemjs")
+    - [bower]("https://github.com/bower/bower")
+    - [npm]("https://github.com/npm/npm")
+    - [jqeury]("https://github.com/jquery/jquery")
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### CSS
+    - [bootstrap]("http://getbootstrap.com/css")
 
-## Running unit tests
+An example of less files compiled with 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+# How to use
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+For begining clone the repo ( obviously :p )
 
-## Deploying to GitHub Pages
+## Dependency instalation
 
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
+Next go into cloned folder and type :
 
-## Further help
+```
+    composer install
+    cd web/
+    npm install
+    bower install
+```
 
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Build process
+
+Stay into web folder and tip :
+
+```
+    gulp build
+    php ../bin/console assetic:dump
+```
+
+or more concise form :
+
+```
+    npm run build
+```
+
+Indeed a script directvie is define into package.json for build typescrip and run php asset.
+This last command stay in watch mode until you press ctrl+c key.
+
+
+
+
+
