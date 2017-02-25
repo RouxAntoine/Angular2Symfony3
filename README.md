@@ -9,21 +9,21 @@ The purpose of this repository is to provide an example of configuration for int
 ### Technology used
 
 #### PHP
-- [Fos assetic bundle]("https://github.com/symfony/assetic-bundle")
-- [Fos rest bundle]("https://github.com/FriendsOfSymfony/FOSRestBundle")
-- [yuiCompressor]("https://github.com/yui/yuicompressor")
-- [composer]("https://github.com/composer/composer")
+- [Fos assetic bundle](https://github.com/symfony/assetic-bundle)
+- [Fos rest bundle](https://github.com/FriendsOfSymfony/FOSRestBundle)
+- [yuiCompressor](https://github.com/yui/yuicompressor)
+- [composer](https://github.com/composer/composer)
 
 #### Javascript
-- [gulp]("https://github.com/gulpjs/gulp")
-- [less]("https://github.com/less/less.js")
-- [systemJs]("https://github.com/systemjs/systemjs")
-- [bower]("https://github.com/bower/bower")
-- [npm]("https://github.com/npm/npm")
-- [jqeury]("https://github.com/jquery/jquery")
+- [gulp](https://github.com/gulpjs/gulp)
+- [less](https://github.com/less/less.js)
+- [systemJs](https://github.com/systemjs/systemjs)
+- [bower](https://github.com/bower/bower)
+- [npm](https://github.com/npm/npm)
+- [jqeury](https://github.com/jquery/jquery)
 
 ### CSS
-- [bootstrap]("http://getbootstrap.com/css")
+- [bootstrap](http://getbootstrap.com/css)
 
 An example of less files compiled with 
 
