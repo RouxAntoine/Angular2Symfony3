@@ -2,10 +2,10 @@
     System.config({
         baseURL: 'dist/',
         paths: {
-            'npm:': 'lib/'
+            'npm:': 'lib/',
+            'bower:': 'lib/'
         },
         map: {
-            app: 'app',
             '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
             '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
             '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
@@ -17,19 +17,20 @@
             'reflect-metadata': 'npm:reflect-metadata/Reflect.js',
             'rxjs': 'npm:rxjs',
             'environments/environment': 'app/environments/environment.js',
-            'app/app.module': 'app/app.module.js'
+            'app/app.module': 'app/app.module.js',
+            'jquery': 'bower:jquery/dist/jquery.min.js'
         },
         packages: {
-            app: {
-                main: '../main.js',
-                defaultExtension: 'js'
-            },
-            environments: {
-                defaultExtension: 'js'
-            },
-            rxjs: {
-                defaultExtension: 'js'
-            }
+          app: {
+              main: '../main.js',
+              defaultExtension: 'js'
+          },
+          environments: {
+              defaultExtension: 'js'
+          },
+          rxjs: {
+              defaultExtension: 'js'
+          }
         }
     });
 })(this);

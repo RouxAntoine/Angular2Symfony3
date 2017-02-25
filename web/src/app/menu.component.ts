@@ -3,13 +3,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-menu',
   template: `
-          <div>
+          <nav id="header">
               <ul class="menu">
                   <li class="item"><a href="#list">List</a></li>
                   <li class="item"><a href="#">Send</a></li>
                   <li class="item"><a href="#">Repertoire</a></li>
               </ul>
-          </div>
+          </nav>
         `,
   styles: [`
     a {

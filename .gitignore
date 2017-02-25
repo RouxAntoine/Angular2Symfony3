@@ -18,6 +18,7 @@ web/bower_components
 .settings/
 
 # misc
+web/ts-node-*/
 npm-debug.log
 
 # Symfony

@@ -6,23 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        
+        {% block stylesheets %}
+            <link href="{{ asset('bundles/style.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
 
-        <link rel="icon" type="image/x-icon" href="{{ asset('bundles/favicon.ico') }}" />
+        {% block icone %}
+            <link rel="icon" type="image/x-icon" href="{{ asset('bundles/favicon.ico') }}" />
+        {% endblock %}
+        
+        {% block javascriptTop %}
+            <script type="text/javascript" src="{{ asset('bundles/dependency.js')}}" ></script>
+            <script type="text/javascript">
+                  System.import('app');
+            </script>
+        {% endblock %}
 
-        <script src="dist/lib/core-js/client/shim.min.js"></script>
-        <script src="dist/lib/zone.js/dist/zone.js"></script>
-        <script src="dist/lib/reflect-metadata/Reflect.js"></script>
-        <script src="dist/lib/systemjs/dist/system.src.js"></script>
-
-        <script src="dist/systemjs.config.js"></script>
-        <script type="text/javascript">
-          System.import('app');
-        </script>
     </head>
     <body>
         <app-root></app-root>
+        
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascriptBottom %}{% endblock %}
     </body>
 </html>

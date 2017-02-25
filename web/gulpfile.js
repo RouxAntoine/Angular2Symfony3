@@ -1,3 +1,4 @@
+///<reference path="node_modules/@types/node/index.d.ts"/>
 "use strict";
 
 const gulp = require("gulp");
@@ -5,7 +6,6 @@ const del = require("del");
 const sourcemaps = require('gulp-sourcemaps');
 const tsc = require("gulp-typescript");
 const tsProject = tsc.createProject("tsconfig.json");
-// const tslint = require('gulp-tslint');
 
 /**
  * Remove build directory.
@@ -20,7 +20,7 @@ gulp.task('clean', (cb) => {
 gulp.task("compile", () => {
     let tsResult = gulp.src("src/**/*.ts")
         .pipe(sourcemaps.init())
-        .pipe(tsProject())
+        .pipe(tsProject());
     return tsResult.js
         .pipe(sourcemaps.write(".", {sourceRoot: '/src'}))
         .pipe(gulp.dest("dist"));
@@ -35,9 +35,9 @@ gulp.task("resources", () => {
 });
 
 /**
- * Copy all required libraries into build directory.
+ * Copy all node required libraries into build directory.
  */
-gulp.task("libs", () => {
+gulp.task("libs_node", () => {
     return gulp.src([
             'core-js/client/shim.min.js',
             'systemjs/dist/system-polyfills.js',
@@ -48,6 +48,16 @@ gulp.task("libs", () => {
             '@angular/**'
         ], {cwd: "node_modules/**"}) /* Glob required here. */
         .pipe(gulp.dest("dist/lib"));
+});
+
+/**
+ * copy all bower required libraries into build directory.
+ */
+gulp.task("libs_bower", () => {
+  return gulp.src([
+          'jquery/dist/jquery.min.js'
+      ], {cwd: "bower_components/**"})
+      .pipe(gulp.dest("dist/lib"));
 });
 
 /**
@@ -65,6 +75,6 @@ gulp.task('watch', function () {
 /**
  * Build the project.
  */
-gulp.task("build", ['compile', 'resources', 'libs'], () => {
+gulp.task("build", ['compile', 'resources', 'libs_node', 'libs_bower'], () => {
     console.log("Building the project ...");
 });

@@ -3,8 +3,9 @@ export class Repository {
 	private name: string;
   private url: string;
 
-	constructor() {}
-
+	constructor(_id: number) {
+    this.id = _id
+  }
 
   /**
   * Getter && Setter
@@ -28,6 +29,13 @@ export class Repository {
 
   public setUrl(_url:string) {
     this.url = _url;
+  }
+
+  public static fromJson(json: Object) {
+    let repo = new Repository(json["id"]);
+    repo.setName(json["name"]);
+    repo.setUrl(json["url"]);
+    return repo;
   }
 
 }

@@ -6,29 +6,36 @@ assetic:
         cssrewrite: ~
         less:
             node: /usr/bin/node
-            node_paths: [%kernel.root_dir%/../web/node_modules]
-        
+            node_paths: ['%kernel.root_dir%/../web/node_modules']
         yui_css:
-            jar: "%kernel.root_dir%/Resources/lib/yuicompressor-2.4.8.jar"
+            jar: '%kernel.root_dir%/Resources/lib/yuicompressor-2.4.8.jar'
         yui_js:
-            jar: "%kernel.root_dir%/Resources/lib/yuicompressor-2.4.8.jar"
+            jar: '%kernel.root_dir%/Resources/lib/yuicompressor-2.4.8.jar'
     assets:
         favicon:
             inputs:
-                - %kernel.root_dir%/../web/favicon.ico
+                - '%kernel.root_dir%/../web/favicon.ico'
             output: bundles/favicon.ico
-        # phpgithub_js:
+        phpgithub_js:
             # filter: ['yui_js']
-            # inputs:
-            #     - %kernel.root_dir%/../web/bundles/bundle.js
-            # output: dist/js/main.js
+            inputs:
+                - dist/lib/core-js/client/shim.min.js
+                - dist/lib/zone.js/dist/zone.js
+                - dist/lib/reflect-metadata/Reflect.js
+                - dist/lib/systemjs/dist/system.src.js
+                - dist/systemjs.config.js
+                # - %kernel.root_dir%/../web/bower_components/bootstrap/dist/js/bootstrap.min.js
+            output: bundles/dependency.js
 
         phpgithub_css:
             filter: ['yui_css', 'less']
             inputs:
-                - %kernel.root_dir%/../web/css/style.less
-            output: dist/css/style.css
+                - '%kernel.root_dir%/../web/src/app/css/style.less'
+                - '%kernel.root_dir%/../web/bower_components/bootstrap/dist/css/bootstrap.css'
+                # - %kernel.root_dir%/../web/bower_components/bootstrap/dist/css/bootstrap-theme.min.css
+            output: bundles/style.css
 
     # liste les bundles qui contiennent des assets
     bundles:
+      - RepositoryBundle
       - AppBundle

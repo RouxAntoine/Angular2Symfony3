@@ -12,20 +12,21 @@
     "test": "ng test",
     "clean": "gulp clean",
     "compile": "gulp compile",
-    "build": "gulp build",
+    "build": "gulp build && php ../bin/console assetic:dump && concurrently --kill-others \"gulp watch\" \"php ../bin/console assetic:watch\"",
     "start": "concurrently --kill-others \"gulp watch\""
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "^1.0.0-beta.32.3",
     "@angular/common": "^2.4.8",
+    "@angular/compiler": "^2.4.8",
     "@angular/core": "^2.4.8",
     "@angular/forms": "^2.4.8",
     "@angular/http": "^2.4.8",
     "@angular/platform-browser": "^2.4.8",
     "@angular/platform-browser-dynamic": "^2.4.8",
     "@angular/router": "^3.4.8",
-    "@angular/cli": "^1.0.0-beta.32.3",
-    "@angular/compiler": "^2.4.8",
+    "@types/jquery": "^2.0.40",
     "rxjs": "^5.1.1"
   },
   "devDependencies": {

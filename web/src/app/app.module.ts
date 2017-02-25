@@ -7,7 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu.component';
-import { appRoutes } from './controller';
+// import { appRoutes } from './controller';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { appRoutes } from './controller';
     FormsModule,
     HttpModule,
     JsonpModule,
-    RouterModule.forRoot(appRoutes)
+    // RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

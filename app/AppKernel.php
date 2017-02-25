@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new FOS\RestBundle\FOSRestBundle(),
 
             // bundle setup
+            new RepositoryBundle\RepositoryBundle(),
             new AppBundle\AppBundle(),
         ];
 
