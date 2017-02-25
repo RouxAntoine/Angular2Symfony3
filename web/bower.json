@@ -1,9 +1,9 @@
 {
   "name": "phpgithub",
   "authors": [
-    "gitolite <antoinroux@hotmail.fr>"
+    "antoine"
   ],
-  "description": "un github codé en php",
+  "description": "un example de config angular 2 symfony 3",
   "main": "app.php",
   "keywords": [
     "github",
