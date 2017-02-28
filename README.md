@@ -25,8 +25,6 @@ The purpose of this repository is to provide an example of configuration for int
 ### CSS
 - [bootstrap](http://getbootstrap.com/css)
 
-An example of less files compiled with 
-
 
 # How to use
 
