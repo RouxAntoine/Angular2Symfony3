@@ -38,6 +38,7 @@ web/assetic_watch_*
 
 # for this project only
 *.git
+app/Resources/lib/glip/
 
 #System Files
 .DS_Store
